@@ -1,0 +1,34 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квіз</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <div id="quiz-container" class="quiz-box">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <h2 id="question">Запитання</h2>
+            <p id="category" class="category"></p>
+            <div id="answers" class="answers"></div>
+            <div class="bottom-bar">
+                <p id="timer">⏳ <span id="time">15</span> сек</p>
+                <p id="question-counter">1 / 5</p>
+            </div>
+        </div>
+        <div id="result-container" class="result-box hidden">
+            <h2>Гра завершена!</h2>
+            <p>Ваш результат: <span id="score"></span> з <span id="total"></span></p>
+            <p>Середній час відповіді: <span id="avg-time"></span> сек</p>
+            <p>Процент правильних відповідей: <span id="accuracy"></span>%</p>
+            <button id="restart">🔄 Грати знову</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">by Linkfire</footer>
+</body>
+</html>
