@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,15 @@
 </head>
 <body>
     <div class="quiz-wrapper">
-        <div id="quiz-container" class="quiz-box">
+        <!-- Лоббі -->
+        <div id="start-container" class="start-box">
+            <h2>🎮 Готові до квізу?</h2>
+            <p>Перевірте свої знання у різних категоріях!</p>
+            <button id="start-button">▶️ Почати гру</button>
+        </div>
+
+        <!-- Гра -->
+        <div id="quiz-container" class="quiz-box hidden">
             <div class="progress-bar">
                 <div id="progress" class="progress"></div>
             </div>
@@ -20,6 +29,8 @@
                 <p id="question-counter">1 / 5</p>
             </div>
         </div>
+
+        <!-- Результати -->
         <div id="result-container" class="result-box hidden">
             <h2>Гра завершена!</h2>
             <p>Ваш результат: <span id="score"></span> з <span id="total"></span></p>
@@ -28,7 +39,7 @@
             <button id="restart">🔄 Грати знову</button>
         </div>
     </div>
-    <script src="script.js"></script>
     <footer class="footer">by Linkfire</footer>
+    <script src="script.js"></script>
 </body>
 </html>
