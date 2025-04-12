@@ -13,7 +13,7 @@ body {
     max-width: 400px;
 }
 
-.quiz-box, .result-box {
+.quiz-box, .result-box, .start-box {
     background: #fff;
     padding: 20px;
     border-radius: 12px;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    opacity: 0.8;
 }
 
 button:active {
@@ -68,11 +68,6 @@ button:active {
 .progress {
     height: 100%;
     width: 0%;
-    background: #28a745;
-    transition: width 0.3s;
-}
-
-.progress {
     background: linear-gradient(90deg, #28a745, #20c997);
     transition: width 0.5s ease-in-out;
 }
@@ -91,17 +86,6 @@ button:active {
     color: #333;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .footer {
     position: fixed;
     bottom: 10px;
@@ -114,42 +98,58 @@ button:active {
     letter-spacing: 0.5px;
 }
 
-button {
-    color: white;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
+.start-box h2 {
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-button {
-    background: #007bff;
+.start-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
 }
 
-button[data-category="Космос"] {
-    background: #6610f2;
+#start-button {
+    background: #28a745;
 }
 
-button[data-category="Військова"] {
-    background: #4b5320;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-button[data-category="Географія"] {
-    background: #28a745; 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-button[data-category="Інше"] {
-    background: #e74a3b;
+.start-box {
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-button:hover {
-    opacity: 0.8;
+#start-button {
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 18px;
+    padding: 14px 24px;
+    border-radius: 10px;
 }
 
-button:active {
-    transform: scale(0.95);
+#start-button:hover {
+    transform: scale(1.08);
+    opacity: 0.95;
 }
-
